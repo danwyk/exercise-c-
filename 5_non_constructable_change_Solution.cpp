@@ -20,10 +20,3 @@ int nonConstructibleChange(vector<int> coins) {
 
     return currentChangeCreated + 1;
 } // nonConstructibleChange
-
-int main() {
-
-
-
-
-} // main
