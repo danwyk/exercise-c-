@@ -1,5 +1,6 @@
 #include <cmath>
 #include <float.h>
+
 using namespace std;
 
 class BST {
@@ -8,25 +9,44 @@ class BST {
         BST *left;
         BST *right;
 
-        BST (int val);
+        BST(int val);
         BST &insert(int val);
 };
 
-int findclosestValueInBst(BST *tree, int target);
-int findclosestValueInBstHelper (BST *tree, int target, int closest);
+int Helper(BST *tree, int target, int closet);
+int findClosestValueInBst(BST *tree, int target);
 
+int findClosestValueInBst(BST *tree, int target) {
+    // Write your code here.
+    return Helper(tree, target, tree->value);
+};
 
-// Average: 0(log(n)) time| 0(1) space
-// Worst: O(n) time | 0(1) space
-int findclosestValueInBst (BST *tree, int target) {
-    
+int Helper(BST *tree, int target, int closet) {
+    // Time: O(logn) average
+    // Time O(n) worse case
+    // Space: O(logn) average
+    // Space: O(n) worse case
+    // tree recursion不是tail recursion会不断stack
 
-}
+    // update the closet node value
+    if(abs(tree->value - target) < abs(closet - target)) {
+        closet = tree->value;
+    }
 
+    // if target == current node value
+    if(target == closet) {
+        return closet;
+    }
 
-int findclosestValueInBstHelper(BST *tree, int target, int closest) {
-    
+    // if target > current node value, go right
+    if(target > tree->value && tree->right) {
+        return Helper(tree->right, target, closet);
+    }
 
-    
-    return (int)closest;
-}
+    // if target < current node value, go left
+    else if(target < tree->value && tree->left) {
+        return Helper(tree->left, target, closet);
+    } // else if
+
+    return closet;  
+};
