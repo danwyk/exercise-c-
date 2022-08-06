@@ -38,7 +38,7 @@ int Helper(BST *tree, int target, int closet) {
     }
 
     // if target < current node value, go left
-    else if(target < currentNode->value && currentNode->left) {
+    if(target < currentNode->value && currentNode->left) {
       currentNode = currentNode->left;
     }
 
@@ -47,7 +47,7 @@ int Helper(BST *tree, int target, int closet) {
       currentNode = currentNode->right;
     }
     
-    // if target == current node value || current node is nullptr
+    // if target == current node value || left/right is nullptr
     else {
       break;
     }
