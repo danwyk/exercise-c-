@@ -6,6 +6,7 @@ using namespace std;
 
 // O(nlogn) Time, where n is the length of the coins
 // O(1) Space
+// 特殊技巧: current value <= maxChange + 1才可以更新maxChange, 否则return maxChange + 1
 int nonConstructibleChange(vector<int> coins) {
 
     int maxChange = 0;

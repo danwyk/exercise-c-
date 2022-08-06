@@ -5,7 +5,8 @@ using namespace std;
 vector<int> sortedSquaredArray(vector<int> &array) {
     // Write your code here.
     // O(n)
-
+    // insert function插在前面,插完自动指向新插入的位置
+    
     vector<int> new_array;
     new_array.reserve(array.size());
 
