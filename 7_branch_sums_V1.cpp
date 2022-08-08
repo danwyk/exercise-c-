@@ -21,12 +21,15 @@ void Helper(BinaryTree *root, int currentSum, vector<int> &sumList);
 
 vector<int> branchSums(BinaryTree *root) {
     // Write your code here.
+    // O(n) time | O(n) space, where n is the numver of nodes in the Binary Tree
+    
     vector<int> sumList;
 
     Helper(root, 0, sumList);
     return sumList;
 }
 
+// Depth First Search
 void Helper(BinaryTree *root, int currentSum, vector<int> &sumList) {
 
     currentSum += root->value;
