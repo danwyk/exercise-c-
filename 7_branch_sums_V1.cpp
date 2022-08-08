@@ -26,8 +26,9 @@ vector<int> branchSums(BinaryTree *root) {
     vector<int> sumList;
 
     Helper(root, 0, sumList);
+    
     return sumList;
-}
+}; // branchSums
 
 // Depth First Search
 void Helper(BinaryTree *root, int currentSum, vector<int> &sumList) {
@@ -43,4 +44,5 @@ void Helper(BinaryTree *root, int currentSum, vector<int> &sumList) {
       Helper(root->left, currentSum, sumList);
     if(root->right)
       Helper(root->right, currentSum, sumList);
-}
+      
+}; // Helper
