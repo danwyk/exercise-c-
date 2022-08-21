@@ -1,5 +1,6 @@
 def classPhotos(redShirtHeights, blueShirtHeights):
-    # O(nlogn)
+    # O(nlogn) Time
+    # O(1) Space
     redShirtHeights.sort()
     blueShirtHeights.sort()
     isRedBack = False

@@ -5,7 +5,8 @@
 using namespace std;
 
 bool classPhotos(vector<int> redShirtHeights, vector<int> blueShirtHeights) {
-  // O(nlogn)
+  // O(nlogn) Time
+  // O(1) Space
 
   const int SIZE = redShirtHeights.size();
 
