@@ -16,28 +16,22 @@ class LinkedList {
 };
 
 LinkedList *removeDuplicatesFromLinkedList(LinkedList *linkedList) {
-
+    
     // O(n) Time
     // O(1) Space
-    if(linkedList) {
+    assert(linkedList != nullptr);
+    LinkedList *current_node = linkedList;
 
-        LinkedList *current_node = linkedList;
-        LinkedList *temp_node;
+    while(current_node->next) {
 
-    
-        while(current_node->next) {
+        if(current_node->value == current_node->next->value) {
+            current_node->next = current_node->next->next;
+            continue;
+        }
 
-            if(current_node->value == current_node->next->value) {
-                temp_node = current_node->next;
-                current_node->next = current_node->next->next;
-                temp_node->next = nullptr;
-                continue;
-            }
+        current_node = current_node->next;
 
-            current_node = current_node->next;
-      } // while
-
-    } // if linkedlist -> next
+    } // while
 
     return linkedList;
 } // removeDuplicatesFromLinkedList
@@ -46,7 +40,6 @@ LinkedList *removeDuplicatesFromLinkedList(LinkedList *linkedList) {
 
 int main() {
     // 1 -> 1 -> 1 -> 3 -> 4 -> 4 -> 4 -> 5 -> 6 -> 6
-    LinkedList *null = nullptr;
     LinkedList *one = new LinkedList(1);
     LinkedList *one_2 = new LinkedList(1);
     LinkedList *one_3 = new LinkedList(1);
@@ -74,8 +67,7 @@ int main() {
 
     LinkedList *new_link_list = removeDuplicatesFromLinkedList(one);
     // LinkedList *new_link_list = one;
-    assert(new_link_list != nullptr);
-    
+
     while(new_link_list->next) {
         cout << new_link_list->value << " ";
         new_link_list = new_link_list->next;
