@@ -12,6 +12,7 @@
         "new": "cpp",
         "string": "cpp",
         "any": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "ios": "cpp"
     }
 }
