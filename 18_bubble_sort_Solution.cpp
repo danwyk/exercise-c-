@@ -39,13 +39,13 @@ int main() {
     cout << "Before: { ";
     for(auto &i:array) 
         cout << i << " ";
-    cout << " }" << endl; 
+    cout << "}" << endl; 
 
     array = bubbleSort(array);
 
     cout << "After: { ";
     for(auto &i:array) 
         cout << i << " ";
-    cout << " }" << endl; 
+    cout << "}" << endl; 
 
 } // main

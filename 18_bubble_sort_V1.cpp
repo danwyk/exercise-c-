@@ -35,7 +35,7 @@ void bubbleSort(vector<int> &array) {
     cout << "After: { ";
     for(auto &i:array) 
         cout << i << " ";
-    cout << " }" << endl;
+    cout << "}" << endl;
 
     // return array;
 } // bubbleSort
@@ -47,7 +47,7 @@ int main() {
     cout << "Before: { ";
     for(auto &i:array) 
         cout << i << " ";
-    cout << " }" << endl; 
+    cout << "}" << endl; 
 
     bubbleSort(array);
 
