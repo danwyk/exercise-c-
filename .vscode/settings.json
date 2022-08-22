@@ -9,6 +9,9 @@
         "__tuple": "cpp",
         "array": "cpp",
         "ostream": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "string": "cpp",
+        "any": "cpp",
+        "bitset": "cpp"
     }
 }
