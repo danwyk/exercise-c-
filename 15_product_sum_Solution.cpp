@@ -12,7 +12,7 @@ using namespace std;
 //     any_cast<int>(element)
 
 // template<class any>
-int productSum(vector<any> array, int depth) {
+int productSum(vector<any> array, int depth = 1) {
      // O(n) Time, where n is the total number of element in the array, including sub-elements
     // O(d) Space, wehre d is the greatest depth of "Special Arrays" in the array
 
