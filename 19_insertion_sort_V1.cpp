@@ -7,7 +7,7 @@ using namespace std;
 vector<int> insertionSort(vector<int> array) {
 // void insertionSort(vector<int> &array) {
     
-    // Best: O(n) Time | O(1) Space
+    // Best: O(n) Time | O(1) Space, 当array是sorted的情况
     // Average: O(n^2) Time | O(1) Space
     //  Worst: O(n^2) Time | O(1) Space
 
