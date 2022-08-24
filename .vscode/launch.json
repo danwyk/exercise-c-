@@ -1,26 +1,18 @@
 {
     "version": "0.2.0",
     "configurations": [
-            
         {
             "name": "(lldb) Launch",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/16_binary_search_V1",
+            "program": "${workspaceFolder}/21_palindrome_check_V1",
             "args": [],
             "stdio": [
-                null, // redirect stdin
-                null, // don't redirect stdout
-                null // don't redirect stderr
+                null,
+                null,
+                null
             ],
             "cwd": "${workspaceFolder}"
         }
-    
     ]
 }
-
-
-
-
-
-

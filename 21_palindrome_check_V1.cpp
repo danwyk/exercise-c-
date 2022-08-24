@@ -8,7 +8,7 @@ bool isPalindrome(string &str) {
     
     // O(n) Time | O(1) Space
     // 双指针不重合, 同时比较 “左” 和 “右”
-    
+
     int left = 0;
     int right = str.size() - 1;
 
