@@ -9,7 +9,7 @@ vector<int> insertionSort(vector<int> array) {
     
     // Best: O(n) Time | O(1) Space, 当array是sorted的情况
     // Average: O(n^2) Time | O(1) Space
-    //  Worst: O(n^2) Time | O(1) Space
+    // Worst: O(n^2) Time | O(1) Space
 
     for(int i = 1; i < array.size(); ++i) {
 

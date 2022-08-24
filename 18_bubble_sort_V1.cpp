@@ -16,14 +16,14 @@ void bubbleSort(vector<int> &array) {
 
     while(num_swap != 0) {
 
-        cout << "------------- loop size: " << size << " --------------" << endl;
+        // cout << "------------- loop size: " << size << " --------------" << endl;
 
         num_swap = 0;
         for(int i = 0; i + 1 < size; ++i) {
 
             if(array[i] > array[i+1]) {
                 swap(array[i], array[i+1]);
-                cout << "Swap " << array[i] << " and " << array[i+1] << endl;
+                // cout << "Swap " << array[i] << " and " << array[i+1] << endl;
                 num_swap++;
             }
           
@@ -32,10 +32,10 @@ void bubbleSort(vector<int> &array) {
         size--;
     } // while
 
-    cout << "After: { ";
-    for(auto &i:array) 
-        cout << i << " ";
-    cout << "}" << endl;
+    // cout << "After: { ";
+    // for(auto &i:array) 
+    //     cout << i << " ";
+    // cout << "}" << endl;
 
     // return array;
 } // bubbleSort

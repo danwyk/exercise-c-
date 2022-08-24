@@ -18,7 +18,7 @@ vector<int> insertionSort(vector<int> array) {
 
         int j = i;
 
-        while(j > 0 && array[j] < array[j - 1]) {
+        while(j >= 1  && array[j] < array[j - 1]) {
             swap(array[j], array[j-1]);
             j--;
         } // while
