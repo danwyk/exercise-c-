@@ -41,6 +41,7 @@ string runLengthEncoding(string str) {
 
     // 当指到最后一个char时, 加入的是second last char, 所以最后一个char没有加进去,
     // 手动加入最后一个char
+    // 同时还可以处理, 整个string只有一个char的情况
     encoded_string_char.push_back(to_string(current_run_length)[0]);
     encoded_string_char.push_back(str[str.size() - 1 ]);
 
